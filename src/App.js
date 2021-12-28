@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import SquareGenerator from './Components/SquareGenerator';
+import styled from 'styled-components';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div 
+      style={{
+        backgroundColor: 'black',
+        height: '100vh',
+        maring: 0
+      }}
+      className="App">
+      <Title>Click me while you can!</Title>
+      <SquareGenerator />
     </div>
   );
 }
 
 export default App;
+
+const Title = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: white;
+  font-size: 108px;
+`
